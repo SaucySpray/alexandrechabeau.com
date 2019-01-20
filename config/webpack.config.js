@@ -59,16 +59,13 @@ module.exports = {
                     'sass-loader'
                 ]
             }, {
-                test: /\.(jpg|png|svg|gif)$/,
+                test: /\.(svg|woff2|ttf)$/,
+                loader: 'url-loader'
+            }, {
+                test: /\.(jpg|png|gif)$/,
                 loader: 'file-loader',
                 options: {
                     outputPath: path.join('static', 'img')
-                }
-            }, {
-                test: /\.(woff|woff2|otf|eot|ttf)$/,
-                loader: 'file-loader',
-                options: {
-                    outputPath: path.join('static', 'fonts')
                 }
             }, {
                 test: /\.html$/,

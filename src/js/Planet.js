@@ -45,8 +45,8 @@ export default class Planet {
         this.controler = null
         this.controlerProps = {
             zoom: {
-                min: 100,
-                max: 100,
+                min: 105,
+                max: 105,
                 speed: 0.2
             },
             rotateSpeed: 0.1,
@@ -74,7 +74,7 @@ export default class Planet {
          */
         this.kernelProps = {
             amount: 100000,
-            particleSize: 0.15,
+            particleSize: 0.2,
             color: 0xC2D5FF,
             radius: 20,
             get: false,
@@ -82,7 +82,7 @@ export default class Planet {
         }
         this.surfaceProps = {
             amount: 100000,
-            particleSize: 0.15,
+            particleSize: 0.3,
             color: 0x00AAFF,
             radius: 50,
             get: false,
@@ -90,7 +90,7 @@ export default class Planet {
         }
         this.atmosphereProps = {
             amount: 10000,
-            particleSize: 0.15,
+            particleSize: 0.2,
             color: 0x7B8EA7,
             radius: 60,
             get: false,
@@ -98,7 +98,7 @@ export default class Planet {
         }
         this.sateliteProps = {
             amount: 1000,
-            particleSize: 0.05,
+            particleSize: 0.1,
             color: 0xffffff,
             radius: 64,
             get: true,

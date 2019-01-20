@@ -1,94 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+
+@font-face {
+    font-family: 'Nasa';
+    font-style: normal;
+    src: url('../media/fonts/nasa.ttf') format('truetype');
+    font-weight: 100;
+}
+
 html,
 body {
-  margin: 0;
-  padding: 0;
-  width: 100vW;
-  height: 100vh;
-  overflow: hidden;
-  background-color: black;
-  position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100vW;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+    position: relative;
 }
 
 #planet {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  bottom: -30%;
-  z-index: 10;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -30%;
+    z-index: 10;
 }
 
 canvas {
-  position: absolute;
-  z-index: 10;
+    position: absolute;
+    z-index: 10;
 }
 
 #main {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  height: 22rem;
-  padding: 2rem 0;
-  z-index: 15;
-}
-
-@font-face {
-  font-family: Raleway;
-  src: url('../media/fonts/Raleway-Thin.ttf') format('ttf');
-  font-weight: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 28vh;
+    margin-top: 2rem;
+    padding: 2rem 0;
+    z-index: 15;
 }
 
 .title {
-  font-family: 'Raleway', sans-serif;
-  font-size: 26px;
-  font-weight: 100;
-  text-transform: uppercase;
-  color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+    font-family: 'Nasa', sans-serif;
+    font-size: 32px;
+    font-weight: 100;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
 }
 
 .content {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  height: auto;
-  font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    padding: 0 10%;
 }
 
 .content-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 1.4rem;
-  padding: 0 10%;
-  font-size: 14px;
-  color: white;
-  line-height: 1.3;
-  letter-spacing: 1.1px;
-  text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1.4rem;
+    font-family: 'Cabin', sans-serif;
+    font-size: 18px;
+    color: white;
+    line-height: 1.3;
+    letter-spacing: 1.1px;
+    text-align: center;
 }
 
 .social {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-  width: 20rem;
-  height: 4rem;
-  height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 20rem;
+    height: 3rem;
 }
 
 .social .social-el {
-  width: 1.5rem;
-  height: 1.5rem;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .dribbble { background-image: url('../media/img/dribbble.svg'); }
@@ -96,3 +107,55 @@ canvas {
 .github { background-image: url('../media/img/github.svg'); }
 .linkedin { background-image: url('../media/img/linkedin.svg'); }
 .twitter { background-image: url('../media/img/twitter.svg'); }
+
+@media screen and (max-width: 800px) {
+    #main {
+        height: 42vh;
+    }
+    .content {
+        padding: 0 8%;
+    }
+}
+
+@media screen and (max-height: 940px) {
+    #main {
+        height: 48vh;
+        margin-top: 0;
+    }
+    .content-text {
+        margin-bottom: 2rem;
+        font-size: 15px;
+    }
+    .title {
+        margin-bottom: 1rem;
+        font-size: 26px;
+    }
+
+    .content { padding: 0 7%; }
+}
+
+@media screen and (max-height: 670px) {
+    #main {
+        margin-top: 0rem;
+        height: 64vh;
+    }
+    .content-text {
+        margin-bottom: 1rem;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-height: 570px) {
+    #main {
+        margin-top: 0rem;
+        height: 70vh;
+    }
+    .title {
+        margin-bottom: 1rem;
+        font-size: 24px;
+    }
+    .content-text {
+        margin-bottom: 1rem;
+        font-size: 14px;
+    }
+}
